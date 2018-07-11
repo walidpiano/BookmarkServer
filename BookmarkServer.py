@@ -108,6 +108,6 @@ class Shortener(http.server.BaseHTTPRequestHandler):
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 8000))
-    server_address = ('', 8000)
+    server_address = ('', PORT)
     httpd = http.server.HTTPServer(server_address, Shortener)
     httpd.serve_forever()
